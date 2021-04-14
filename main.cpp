@@ -3,32 +3,21 @@
 #include <stdexcept>
 #include <cstdlib>
 #include <string>
+#include <ctime>
 
 using namespace std;
 
-// I HAVE NO IDEA IF THIS IS RIGHT AT ALL
 template <typename T>
 unsigned min_index(const vector<T> &vals, unsigned index){ //returns the index of the minimum value
  
-    
-  
-       //exceptions
-       // if (index > vals.size() - 1){throw runtime_error("Too Big");}
-       // if (index < 1){throw runtime_error("Too Small");}
-        unsigned smallesti = index;
-
-        // actual search
-        //unsigned smallesti = index;
-        // T smallest = vals[index];  // not needed
-        for (unsigned i = index; i < vals.size(); i++){
-            if (vals[i] < vals[smallesti])
-            {
-                smallesti = i;
-                // smallest = vals[i];
-            }
+    unsigned smallesti = index;
+    for (unsigned i = index; i < vals.size(); i++){
+        if (vals[i] < vals[smallesti]){
+            smallesti = i;
         }
-        return smallesti;
     }
+    return smallesti;
+}
    
 vector<char> createVector(){
     int vecSize = rand() % 26;
