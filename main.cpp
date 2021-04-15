@@ -102,9 +102,40 @@ int main(){
       cout << charTestV.at(vectorindex) << ' ';
       ++vectorindex;
     }
+    vectorindex = 0;
     cout << endl;
 
-    
+    vector<int> intTestV;
+    cout << "Selection Sort testing (for ints): " << endl;
+    intTestV.push_back(11);
+    intTestV.push_back(100);
+    intTestV.push_back(3);
+    intTestV.push_back(86);
+    intTestV.push_back(27);
+    intTestV.push_back(16);
+    intTestV.push_back(31);
+    intTestV.push_back(10781);
+
+    cout << "intTestV before selection sort: " << endl;
+    while (vectorindex < intTestV.size())
+    {
+      cout << intTestV.at(vectorindex) << ' ';
+      ++vectorindex;
+    }
+    cout << endl;
+    vectorindex = 0;
+
+    selection_sort(intTestV);
+
+    cout << "intTestV after selection sort: " << endl;
+    while (vectorindex < intTestV.size())
+    {
+      cout << intTestV.at(vectorindex) << ' ';
+      ++vectorindex;
+    }
+    cout << endl;
+    vectorindex = 0;
+
   }
   catch (const out_of_range& excpt) 
   {
