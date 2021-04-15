@@ -71,17 +71,47 @@ int main(){
     char curChar;
     int index;
     int numOfRuns = 10;
+    unsigned vectorindex = 0;
     while(--numOfRuns >= 0){
       cout << "Enter a number: " << endl;
       cin >> index;
       curChar = getElement(vals,index);
       cout << "Element located at " << index << ": is " << curChar << endl;
     }
+    vector<char> charTestV;
+    cout << "Selection Sort testing: " << endl;
+    charTestV.push_back('v');
+    charTestV.push_back('i');
+    charTestV.push_back('c');
+    charTestV.push_back('e');
+    charTestV.push_back('a');
+    cout << "charTestV before selection sort: " << endl;
+
+    while (vectorindex < charTestV.size())
+    {
+      cout << charTestV.at(vectorindex) << ' ';
+      ++vectorindex;
+    }
+    cout << endl;
+
+    vectorindex = 0;
+    cout << "charTestV after selection sort: " << endl;
+    selection_sort(charTestV);
+    while (vectorindex < charTestV.size())
+    {
+      cout << charTestV.at(vectorindex) << ' ';
+      ++vectorindex;
+    }
+    cout << endl;
+
+    
   }
   catch (const out_of_range& excpt) 
   {
     cout << excpt.what() << endl;
   }
+
+
     return 0;
 }
 
