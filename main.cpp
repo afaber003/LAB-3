@@ -80,6 +80,8 @@ int main(){
     }
     vector<char> charTestV;
     cout << "Selection Sort testing: " << endl;
+    cout << endl;
+
     charTestV.push_back('v');
     charTestV.push_back('i');
     charTestV.push_back('c');
@@ -93,6 +95,7 @@ int main(){
       ++vectorindex;
     }
     cout << endl;
+    cout << endl;
 
     vectorindex = 0;
     cout << "charTestV after selection sort: " << endl;
@@ -104,9 +107,11 @@ int main(){
     }
     vectorindex = 0;
     cout << endl;
+    cout << endl;
 
     vector<int> intTestV;
     cout << "Selection Sort testing (for ints): " << endl;
+    cout << endl;
     intTestV.push_back(11);
     intTestV.push_back(100);
     intTestV.push_back(3);
@@ -123,6 +128,7 @@ int main(){
       ++vectorindex;
     }
     cout << endl;
+    cout << endl;
     vectorindex = 0;
 
     selection_sort(intTestV);
@@ -134,8 +140,47 @@ int main(){
       ++vectorindex;
     }
     cout << endl;
+    cout << endl;
     vectorindex = 0;
 
+    vector<string> stringTestV;
+    cout << "Selection Sort testing (for strings): " << endl;
+    cout << endl;
+
+    stringTestV.push_back("car");
+    stringTestV.push_back("apple");
+    stringTestV.push_back("bar");
+    stringTestV.push_back("house");
+    stringTestV.push_back("movie");
+    stringTestV.push_back("telescope");
+    stringTestV.push_back("zoo");
+    stringTestV.push_back("door");
+    stringTestV.push_back("mouse");
+    stringTestV.push_back("ancient");
+    stringTestV.push_back("computer science");
+    stringTestV.push_back("character");
+    
+    cout << "stringTestV before selection sort: " << endl;
+    while (vectorindex < stringTestV.size())
+    {
+      cout << stringTestV.at(vectorindex) << ' ';
+      ++vectorindex;
+    }
+    cout << endl;
+    cout << endl;
+    vectorindex = 0;
+
+    selection_sort(stringTestV);
+    cout << "stringTestV after selection sort: " << endl;
+    while (vectorindex < stringTestV.size())
+    {
+      cout << stringTestV.at(vectorindex) << ' ';
+      ++vectorindex;
+    }
+    cout << endl;
+    cout << endl;
+    vectorindex = 0;
+    
   }
   catch (const out_of_range& excpt) 
   {
